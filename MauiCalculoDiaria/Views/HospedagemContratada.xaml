@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCalculoDiaria.Views.HospedagemContratada"
+             Title="HospedagemContratada"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Background}">
+
+    <ContentPage.Resources>
+
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="Exo"/>
+        </Style>
+        
+    </ContentPage.Resources>
+    
+    
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" Spacing="10" Padding="10">
+
+        <Label Text="SOBRE MIM"
+               TextColor="{StaticResource Primary}"
+               HorizontalOptions="Center"
+               FontSize="95"
+               FontFamily="VinaSans"
+               >
+
+            <Label.Shadow>
+
+                <Shadow Brush="DarkRed"
+                        Radius="0"
+                        Offset="5,5"
+                        Opacity="0.5"/>
+
+            </Label.Shadow>
+            
+        </Label>
+
+        <BoxView HeightRequest="3"
+                 WidthRequest="320"
+                 Color="Red"
+                 Margin="0,3"/>
+
+        <Frame Margin="10" BackgroundColor="{StaticResource Background}">
+
+            <Label HorizontalTextAlignment="Center"
+                Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean tincidunt volutpat nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Duis ornare tellus felis, eget pharetra lectus rutrum ut. Pellentesque dignissim at risus in fringilla. Ut tristique sollicitudin neque, tristique accumsan est tristique sit amet. Proin quis rutrum sapien. Morbi lacus metus, congue nec nisl pretium, tempor tempus ex. Praesent placerat semper augue non auctor. Quisque ultrices felis sed ex efficitur elementum. Nulla sit amet lobortis leo, ut molestie dui. Quisque lacus odio, hendrerit et elementum non, mollis sit amet massa. Fusce ac purus accumsan libero tempor egestas at eget est. Aliquam erat volutpat. Quisque quis pretium ipsum. Mauris tempor enim arcu. Maecenas nec gravida orci, sit amet rhoncus felis. "/>
+            
+
+
+
+        </Frame>
+
+        <Button Text="Voltar" TextColor="White" 
+        BackgroundColor="{StaticResource Primary}"
+        Margin="10"
+        Clicked="Button_Clicked">
+
+            <Button.Shadow>
+                <Shadow Brush="DarkRed"
+                Radius="0"
+                Offset="3,3"
+                Opacity="1"/>
+            </Button.Shadow>
+
+        </Button>
+
+
+    </VerticalStackLayout>
+    
+    
+    
+    
+    
+</ContentPage>

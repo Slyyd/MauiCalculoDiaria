@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCalculoDiaria.Views.ContratacaoHospedagem"
+             Title="ContratacaoHospedagem"
+             NavigationPage.HasNavigationBar="False"
+             Background="{StaticResource Background}">
+
+    <ContentPage.Resources>
+
+        <Style TargetType="Label">
+
+            <Setter Property="FontFamily" Value="Exo"/>
+
+        </Style>
+        
+    </ContentPage.Resources>
+    
+    
+    
+    <VerticalStackLayout VerticalOptions="CenterAndExpand"
+                         Padding="10">
+
+        <Label 
+            Text="CALCULO DA DIARIA"
+            HorizontalOptions="Center"
+            FontSize="50"
+            FontFamily="VinaSans"
+            TextColor="{StaticResource Primary}">
+
+            <Label.Shadow>
+
+                <Shadow Brush="DarkRed"
+            Radius="0"
+            Offset="3,3"
+            Opacity="0.5"/>
+
+            </Label.Shadow>
+
+
+        </Label>
+        <BoxView HeightRequest="2"
+                 WidthRequest="290"
+                 Margin="0,3"
+                 Color="{StaticResource Primary}"/>
+
+        <Frame Padding="10" Margin="4" BackgroundColor="{StaticResource Background}">
+            
+            <VerticalStackLayout>
+
+
+                <Label Text="Quantidade de pessoas"
+                       HorizontalOptions="Center"
+                       FontAttributes="Italic, Bold"
+                       FontSize="20"
+                       Padding="5"/>
+
+
+                <Grid RowDefinitions="Auto, Auto"
+                      ColumnDefinitions="*, *, 3*"
+                      Padding="10"
+                      RowSpacing="12"
+                      ColumnSpacing="15"
+                      HorizontalOptions="Center">
+
+                        <Label Grid.Row="0" Grid.Column="0"
+                               Text="Adultos"/>
+
+                    <Label Grid.Row="0" Grid.Column="1"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference st_adultos}"
+                           HorizontalOptions="Center"
+                           TextColor="{StaticResource PrimaryDark}"/>
+
+                    <Stepper Grid.Row="0" Grid.Column="2" x:Name="st_adultos"
+                           Minimum="0" Maximum="10" Increment="1"/>
+
+                    <Label Grid.Row="1" Grid.Column="0"
+                           Text="Crianças"/>
+
+                    <Label Grid.Row="1" Grid.Column="1"
+                           Text="{Binding Value}"
+                           BindingContext="{x:Reference st_criancas}"
+                           HorizontalOptions="Center"
+                           TextColor="{StaticResource PrimaryDark}"/>
+
+                    <Stepper Grid.Row="1" Grid.Column="2" x:Name="st_criancas"
+                                 Minimum="0" Maximum="10" Increment="1"/>
+
+
+                </Grid>
+
+                <BoxView HeightRequest="2"
+                         HorizontalOptions="FillAndExpand"
+                         Color="Gray"
+                         Margin="0,5"/>
+
+                <Label Text="Escolha a sua suíte"
+                       FontFamily="Exo"
+                       FontAttributes="Italic, Bold"
+                       FontSize="20"
+                       HorizontalOptions="Center"
+                       Margin="3"
+                       Padding="5"/>
+
+                <Picker x:Name="pck_quarto"
+                        Title="Selecione sua acomodação"
+                        Margin="10"/>
+
+                <BoxView HeightRequest="2"
+                         HorizontalOptions="FillAndExpand"
+                         Color="Gray"
+                         Margin="0,5"
+                         />
+
+                <Frame Padding="10" Margin="10" 
+                       BackgroundColor="{StaticResource Background}">
+
+                    <VerticalStackLayout>
+
+                        <Label Text="Período da estadia"
+                               Margin="3"
+                               FontAttributes="Italic,Bold"
+                               FontSize="20"
+                               Padding="5"
+                               HorizontalOptions="CenterAndExpand"/>
+
+                        <HorizontalStackLayout Padding="3" Spacing="10" HorizontalOptions="Center">
+
+                            <Label Text="Check-in"
+                                   Padding="10"
+                                   VerticalOptions="Center"
+                                   WidthRequest="90"/>
+                            <DatePicker x:Name="dtpck_checkin"
+                                        Format="dd/MM/yyyy"
+                                        HorizontalOptions="FillAndExpand"/>
+
+                        </HorizontalStackLayout>
+
+                        <HorizontalStackLayout Padding="3" Spacing="10" HorizontalOptions="Center">
+
+                            <Label Text="Check-out"
+                                   Padding="10"
+                                   VerticalOptions="Center"
+                                   WidthRequest="90"/>
+                            <DatePicker x:Name="dtpck_checkout"
+                                        Format="dd/MM/yyyy"
+                                        HorizontalOptions="FillAndExpand"/>
+
+                        </HorizontalStackLayout>
+
+                    </VerticalStackLayout>
+
+                </Frame>
+
+                <Button Text="Calcular" TextColor="White" 
+                        BackgroundColor="{StaticResource Primary}"
+                        Margin="10"
+                        Clicked="Button_Clicked">
+
+                    <Button.Shadow>
+                        <Shadow Brush="DarkRed"
+                                Radius="0"
+                                Offset="3,3"
+                                Opacity="1"/>
+                    </Button.Shadow>
+
+                </Button>
+
+            </VerticalStackLayout>
+            
+            
+        </Frame>
+        
+    </VerticalStackLayout>
+    
+</ContentPage>
