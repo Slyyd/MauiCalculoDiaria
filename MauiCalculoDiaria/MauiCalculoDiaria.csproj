@@ -69,10 +69,16 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\PaginaSobre.xaml.cs">
+	    <DependentUpon>PaginaSobre.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Views\ContratacaoHospedagem.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\HospedagemContratada.xaml">
+	  <MauiXaml Update="Views\PaginaSobre.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -7,8 +7,14 @@ public partial class ContratacaoHospedagem : ContentPage
 		InitializeComponent();
 	}
 
-    private async void Button_Clicked(object sender, EventArgs e)
+    private void Button_Clicked(object sender, EventArgs e)
     {
-		await Navigation.PushAsync(new Views.HospedagemContratada());
+        // Todo
+        return;
+    }
+
+    private async void Sobre_Page_Button(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Views.PaginaSobre());
     }
 }

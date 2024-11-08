@@ -167,6 +167,20 @@
 
                 </Button>
 
+                <Button Text="Sobre Mim" TextColor="White" 
+                        BackgroundColor="{StaticResource Primary}"
+                        Margin="10"
+                        Clicked="Sobre_Page_Button">
+
+                    <Button.Shadow>
+                        <Shadow Brush="DarkRed"
+                                Radius="0"
+                                Offset="3,3"
+                                Opacity="1"/>
+                    </Button.Shadow>
+
+                </Button>
+
             </VerticalStackLayout>
             
             
