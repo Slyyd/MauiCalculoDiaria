@@ -46,9 +46,10 @@
                        HorizontalOptions="CenterAndExpand"
                        FontSize="30"
                        FontAttributes="Bold,Italic"
-                       TextColor="{StaticResource Primary}"/>
+                       TextColor="{StaticResource Primary}"
+                       x:Name="txt_suite"/>
 
-                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Color="White" Margin="0,3"/>
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Color="Gray" Margin="0,3"/>
 
                 <Label Text="Quantidade de pessoas"
                        FontSize="20"
@@ -61,13 +62,13 @@
                     <Label Text="Adultos" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
                     <Label Text="Crianças" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
 
-                    <Label Text="4" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource Primary}"/>
-                    <Label Text="3" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource Primary}"/>
+                    <Label Text="4" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource Primary}" x:Name="txt_adultos"/>
+                    <Label Text="3" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource Primary}" x:Name="txt_criancas"/>
 
 
                 </Grid>
 
-                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Color="White" Margin="0,3"/>
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Color="Gray" Margin="0,3"/>
 
                 <Label Text="Data da estadia"
                        FontSize="20"
@@ -80,13 +81,13 @@
                     <Label Text="Check-in" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
                     <Label Text="Check-out" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
 
-                    <Label Text="08/11/2024" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource Primary}"/>
-                    <Label Text="15/11/2024" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource Primary}"/>
+                    <Label Text="08/11/2024" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource Primary}" x:Name="datacin"/>
+                    <Label Text="15/11/2024" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource Primary}" x:Name="datacout"/>
 
 
                 </Grid>
 
-                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Color="White" Margin="0,3"/>
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Color="Gray" Margin="0,3"/>
 
                 <Label Text="Valor Total"
                        FontSize="20"
@@ -97,7 +98,8 @@
                 <Label Text="R$ 1050,00"
                        HorizontalTextAlignment="Center"
                        Margin="0"
-                       TextColor="{StaticResource Primary}"/>
+                       TextColor="{StaticResource Primary}"
+                       x:Name="dou_valortotal"/>
 
             </VerticalStackLayout>
 

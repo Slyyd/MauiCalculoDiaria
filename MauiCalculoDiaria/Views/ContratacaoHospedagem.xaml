@@ -105,7 +105,8 @@
 
                 <Picker x:Name="pck_quarto"
                         Title="Selecione sua acomodação"
-                        Margin="10"/>
+                        Margin="10"
+                        ItemDisplayBinding="{Binding Descricao}"/>
 
                 <BoxView HeightRequest="2"
                          HorizontalOptions="FillAndExpand"
@@ -132,6 +133,7 @@
                                    VerticalOptions="Center"
                                    WidthRequest="90"/>
                             <DatePicker x:Name="dtpck_checkin"
+                                        DateSelected="dtpck_checkin_DateSelected"
                                         Format="dd/MM/yyyy"
                                         HorizontalOptions="FillAndExpand"/>
 
