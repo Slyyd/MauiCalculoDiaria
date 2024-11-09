@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiCalculoDiaria.Views.HospedagemContratada"
+             Title="HospedagemContratada"
+             NavigationPage.HasNavigationBar="False"
+             Background="{StaticResource Background}">
+
+    <ContentPage.Resources>
+
+        <Style TargetType="Label">
+
+            <Setter Property="FontFamily" Value="Exo"/>
+
+        </Style>
+
+    </ContentPage.Resources>
+
+
+    <VerticalStackLayout VerticalOptions="CenterAndExpand" Padding="10">
+
+        <Label Text="DETALHES DA ESTADIA"
+               FontFamily="VinaSans"
+               FontSize="50"
+               TextColor="{StaticResource Primary}"
+               HorizontalOptions="CenterAndExpand">
+            <Label.Shadow>
+                <Shadow Brush="DarkRed"
+                        Radius="0"
+                        Offset="3,3"
+                        Opacity="0.5"/>
+            </Label.Shadow>
+        </Label>
+
+        <BoxView HeightRequest="2"
+                 WidthRequest="330"
+                 Color="{StaticResource Primary}"
+                 Margin="0,3"/>
+
+
+        <Frame Padding="10" Margin="10" BackgroundColor="{StaticResource Background}">
+
+            <VerticalStackLayout Spacing="3">
+
+                <Label Text="Suíte Super"
+                       HorizontalOptions="CenterAndExpand"
+                       FontSize="30"
+                       FontAttributes="Bold,Italic"
+                       TextColor="{StaticResource Primary}"/>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Color="White" Margin="0,3"/>
+
+                <Label Text="Quantidade de pessoas"
+                       FontSize="20"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="3"
+                       FontAttributes="Bold"/>
+
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *" Padding="10">
+
+                    <Label Text="Adultos" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="Crianças" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+
+                    <Label Text="4" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource Primary}"/>
+                    <Label Text="3" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource Primary}"/>
+
+
+                </Grid>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Color="White" Margin="0,3"/>
+
+                <Label Text="Data da estadia"
+                       FontSize="20"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="3"
+                       FontAttributes="Bold"/>
+
+                <Grid RowDefinitions="Auto, Auto" ColumnDefinitions="*, *" Padding="10">
+
+                    <Label Text="Check-in" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="0"/>
+                    <Label Text="Check-out" HorizontalTextAlignment="Center" Grid.Row="0" Grid.Column="1"/>
+
+                    <Label Text="08/11/2024" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="0" TextColor="{StaticResource Primary}"/>
+                    <Label Text="15/11/2024" HorizontalTextAlignment="Center" Grid.Row="1" Grid.Column="1" TextColor="{StaticResource Primary}"/>
+
+
+                </Grid>
+
+                <BoxView HeightRequest="2" HorizontalOptions="FillAndExpand" Color="White" Margin="0,3"/>
+
+                <Label Text="Valor Total"
+                       FontSize="20"
+                       HorizontalOptions="CenterAndExpand"
+                       Margin="3"
+                       FontAttributes="Bold"/>
+
+                <Label Text="R$ 1050,00"
+                       HorizontalTextAlignment="Center"
+                       Margin="0"
+                       TextColor="{StaticResource Primary}"/>
+
+            </VerticalStackLayout>
+
+            
+
+        </Frame>
+        
+        <Button Text="Voltar" BackgroundColor="{StaticResource Primary}" TextColor="White" Clicked="Button_Clicked" WidthRequest="545">
+
+            <Button.Shadow>
+
+                <Shadow Brush="DarkRed" Radius="0" Offset="3,3" Opacity="1"/>
+
+            </Button.Shadow>            
+            
+        </Button>
+
+    </VerticalStackLayout>
+    
+</ContentPage>

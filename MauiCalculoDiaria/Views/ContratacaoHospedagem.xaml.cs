@@ -7,14 +7,24 @@ public partial class ContratacaoHospedagem : ContentPage
 		InitializeComponent();
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private async void Button_Clicked(object sender, EventArgs e)
     {
-        // Todo
-        return;
+        try
+        {
+
+            await Navigation.PushAsync(new Views.HospedagemContratada());
+
+        }
+        catch (Exception ex) { DisplayAlert("Erro", ex.Message, "OK"); }
     }
 
     private async void Sobre_Page_Button(object sender, EventArgs e)
     {
-        await Navigation.PushAsync(new Views.PaginaSobre());
+        try
+        {
+
+            await Navigation.PushAsync(new Views.PaginaSobre());
+
+        } catch (Exception ex) { DisplayAlert("Erro", ex.Message, "OK"); }
     }
 }

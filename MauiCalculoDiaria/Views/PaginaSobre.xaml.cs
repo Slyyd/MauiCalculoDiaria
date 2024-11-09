@@ -1,11 +1,11 @@
 namespace MauiCalculoDiaria.Views;
 
-public partial class HospedagemContratada : ContentPage
+public partial class PaginaSobre : ContentPage
 {
-	public HospedagemContratada()
-	{
-		InitializeComponent();
-	}
+	public PaginaSobre()
+    {
+        InitializeComponent();
+    }
 
     private async void Button_Clicked(object sender, EventArgs e)
     {
